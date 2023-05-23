@@ -17,5 +17,7 @@ Click on Login Button
     click button    ${btn_loginButton}
 Verify Succesfull Login
     page should contain    Dashboard
+Error message shown while invaild login
+    page should contain    Login was unsuccessful
 Close All Browser
     close all browsers
