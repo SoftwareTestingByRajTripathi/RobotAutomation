@@ -15,9 +15,11 @@ Enter CRM User Password
     input text    ${txt_userPassowrd}    ${crm_UserPassowrd}
 Click On Login Button
     click button    ${btn_loginButton}
-Verify succesfull Login
+Verify successfull Login
     page should contain    Dashboard
-Error Message when login unsuccesfull
+Error Message when login unsuccessfull
     page should contain    Invalid credentials
+Error Message when user name and password is blank
+    page should contain    Required
 Close CRM Url browser
     close all browsers
