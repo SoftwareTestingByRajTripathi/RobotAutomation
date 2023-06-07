@@ -19,7 +19,7 @@ TC_01 Verify that login with valid credentials
     Enter CRM User Password    ${crm_UserPassword}
     Click On Login Button
     sleep    3
-    verify succesfull login
+    Verify successfull login
     Close CRM Url browser
 TC_02 Verify that login with invalid crendentials
     open browser    ${login_url}    ${browser}
@@ -29,9 +29,19 @@ TC_02 Verify that login with invalid crendentials
     Enter CRM User Password    ${crm_invalidPassword}
     click on login button
     sleep    3
-    Error message when login unsuccesfull
+    Error Message when login unsuccessfull
     close crm url browser
-TC_03 Verify that login with valid user name and empty password
+TC_03 Verify that login with valid username and invalid password
+    open browser    ${login_url}    ${browser}
+    sleep    3
+    Enter CRM User Name    ${crm_UserName}
+    sleep    3
+    Enter CRM User Password    ${crm_invalidPassword}
+    click on login button
+    sleep    3
+    Error Message when login unsuccessfull
+    close crm url browser
+TC_04 Verify that login with valid user name and empty password
     open browser    ${login_url}    ${browser}
     sleep    3
     Enter CRM User Name    ${crm_UserName}
@@ -41,7 +51,7 @@ TC_03 Verify that login with valid user name and empty password
     sleep    3
     Error Message when user name and password is blank
     close crm url browser
-TC_04 Verify that login with empty user name and empty password
+TC_05 Verify that login with empty user name and empty password
     open browser    ${login_url}    ${browser}
     sleep    3
     Enter CRM User Name    ${EMPTY}
